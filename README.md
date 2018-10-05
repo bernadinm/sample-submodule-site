@@ -1,7 +1,10 @@
 # Example Website Using Versioned Git Submodules
 
+
+Here is an example of how a git submodule looks like when doing versioned documentation. 
+
 ```bash
-mesospheres-MacBook-Pro-67:test-submodule mbernadin$ git submodule add git@github.com:dcos/dcos ext/dcos/1.11 -b 1.11
+mesospheres-MacBook-Pro-67:test-submodule mbernadin$ git submodule add -b 1.11 git@github.com:dcos/dcos ext/dcos/1.11
 Cloning into '/Users/mbernadin/Sites/test-submodule/ext/dcos/1.11'...
 remote: Enumerating objects: 2, done.
 remote: Counting objects: 100% (2/2), done.
@@ -25,7 +28,7 @@ mesospheres-MacBook-Pro-67:test-submodule mbernadin$ cd ext/dcos/1.11/
 ```
 
 ```bash
-mesospheres-MacBook-Pro-67:test-submodule mbernadin$ git submodule add git@github.com:dcos/dcos ext/dcos/1.12 -b 1.12
+mesospheres-MacBook-Pro-67:test-submodule mbernadin$ git submodule add -b 1.12 git@github.com:dcos/dcos ext/dcos/1.12
 Cloning into '/Users/mbernadin/Sites/test-submodule/ext/dcos/1.12'...
 remote: Enumerating objects: 2, done.
 remote: Counting objects: 100% (2/2), done.
@@ -36,12 +39,14 @@ Resolving deltas: 100% (19114/19114), done.
 ```
 
 ```bash
-[submodule "ext/dcos/1.11"]
-	path = ext/dcos/1.11
-	url = git@github.com:dcos/dcos
 [submodule "ext/dcos/1.12"]
 	path = ext/dcos/1.12
 	url = git@github.com:dcos/dcos
+	branch = 1.12
+[submodule "ext/dcos/1.11"]
+	path = ext/dcos/1.11
+	url = git@github.com:dcos/dcos
+	branch = 1.11
 ```
 
 ```bash
