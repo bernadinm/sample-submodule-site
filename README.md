@@ -83,3 +83,44 @@ Synchronizing submodule url for 'ext/dcos/1.11'
 Synchronizing submodule url for 'ext/dcos/1.12'
 ```
 
+```bash
+mesospheres-MacBook-Pro-67:sample-submodule-site mbernadin$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   .gitmodules
+	new file:   README.md
+	new file:   docs/dcos-1.11/docs
+	new file:   docs/dcos-1.12/docs
+	new file:   ext/dcos/1.11
+	new file:   ext/dcos/1.12
+```
+
+```bash
+mesospheres-MacBook-Pro-67:sample-submodule-site mbernadin$ git commit -m "hello world docs"
+[master (root-commit) 58187b6] hello world docs
+ 6 files changed, 95 insertions(+)
+ create mode 100644 .gitmodules
+ create mode 100644 README.md
+ create mode 120000 docs/dcos-1.11/docs
+ create mode 120000 docs/dcos-1.12/docs
+ create mode 160000 ext/dcos/1.11
+ create mode 160000 ext/dcos/1.12
+mesospheres-MacBook-Pro-67:sample-submodule-site mbernadin$ git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (11/11), 2.28 KiB | 2.28 MiB/s, done.
+Total 11 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/bernadinm/sample-submodule-site/pull/new/master
+remote:
+To github.com:bernadinm/sample-submodule-site.git
+ * [new branch]      master -> master
+```
